@@ -1,0 +1,49 @@
+Treatment	Population	Order
+1-day	P101	OmpF/AcrAB same time
+1-day	P103	AcrAB Only
+1-day	P104	AcrAB Only
+1-day	P106	AcrAB Only
+1-day	P108	AcrAB Only
+1-day	P109	OmpF First
+1-day	P111	AcrAB Only
+1-day	P112	AcrAB Only
+1-day	P113	AcrAB Only
+1-day	P115	AcrAB Only
+1-day	P116	AcrAB Only
+1-day	P118	AcrAB First
+1-day	P120	AcrAB First
+1-day	P121	OmpF/AcrAB same time
+1-day	P123	OmpF/AcrAB same time
+1-day	P124	AcrAB First
+10-day	P401	AcrAB First
+10-day	P403	OmpF/AcrAB same time
+10-day	P404	AcrAB First
+10-day	P406	OmpF/AcrAB same time
+10-day	P408	OmpF/AcrAB same time
+10-day	P409	OmpF First
+10-day	P411	AcrAB First
+10-day	P412	AcrAB First
+10-day	P413	AcrAB First
+10-day	P415	OmpF/AcrAB same time
+10-day	P416	AcrAB First
+10-day	P418	OmpF First
+10-day	P420	AcrAB First
+10-day	P421	OmpF/AcrAB same time
+10-day	P423	AcrAB First
+10-day	P424	OmpF/AcrAB same time
+100-day	P501	AcrAB Only
+100-day	P503	None
+100-day	P504	AcrAB Only
+100-day	P506	None
+100-day	P508	None
+100-day	P509	AcrAB Only
+100-day	P511	None
+100-day	P512	None
+100-day	P513	None
+100-day	P515	None
+100-day	P516	AcrAB First
+100-day	P518	None
+100-day	P520	AcrAB Only
+100-day	P521	None
+100-day	P523	AcrAB Only
+100-day	P524	None
