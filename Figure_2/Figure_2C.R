@@ -2,7 +2,7 @@ library("ggplot2")
 library("dplyr")
 library("ggpubr")
 
-setwd("/Users/megangrace/Library/CloudStorage/Box-Box/Behringer_Lab_Box_Drive/Manuscripts/In_Progress/Antimicrobial_Resistance/Manuscript/GitHub/Figure_2")
+setwd("<Path to>/GitHub/Figure_2")
 AMR_Clones<- read.table("Evolved_Clones_AMR.txt",sep="\t",header=TRUE)
 AMR_Clones
 

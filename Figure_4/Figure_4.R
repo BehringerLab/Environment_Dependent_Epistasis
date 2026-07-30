@@ -4,7 +4,7 @@
 
 library(ggplot2)
 
-setwd("/Users/megangrace/Library/CloudStorage/Box-Box/Behringer_Lab_Box_Drive/Manuscripts/In_Progress/Antimicrobial_Resistance/Manuscript/GitHub/Figure_4")
+setwd("<Path to>/GitHub/Figure_4")
 
 OmpF_AcrB_Spent_Fit<-read.table("OmpF_AcrB_SpentMedia_Comps.txt", sep="\t",header=TRUE)
 OmpF_AcrB_Spent_Fit 

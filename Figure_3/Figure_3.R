@@ -1,6 +1,6 @@
 ###Figure_3
 
-setwd("/Users/megangrace/Library/CloudStorage/Box-Box/Behringer_Lab_Box_Drive/Manuscripts/In_Progress/Antimicrobial_Resistance/Manuscript/GitHub/Figure_3")
+setwd("<Path To>/GitHub/Figure_3")
 
 
 ###Figure 3A Plot OmpF and AcrRAB Mutations
@@ -81,6 +81,9 @@ ggplot(data=acrB_ompF_comp_data, aes(x=Mutant, y=s, fill=Mutant))+
   theme_bw()+
   facet_wrap(~DayPair)
 
+
+acrB_ompF_comp_data %>% group_by(Mutant, DayPair) %>% summarise(avg.s=mean(s),var.s=(sd(s)^2))
+
 #### Figure 3C 
 
 acrB_ompF_mut_order<-read.table("Mutant_Order_Data.txt", sep="\t",header=TRUE)
@@ -96,6 +99,7 @@ ggplot(data=acrB_ompF_mut_order, aes(x=Order, fill=Order))+
   theme_bw()
 
 #Figure 3D AcrB and OmpF Antimicrobial Susceptibility
+library(dplyr)
 
 acrB_ompF_ABS<-read.table("Mutants_10_day_AMR.txt",sep="\t",header=TRUE)
 
@@ -113,7 +117,31 @@ ggplot(data=acrB_ompF_ABS, aes(x=Background, y=Difference, fill=Background))+
   theme_bw()+
   theme(legend.position = "none",panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.text.x = element_text(angle=45,hjust=1))
 
-  
+acrB_ompF_ABS
+acrB_ompF_ABS_table<-acrB_ompF_ABS %>% group_by(Condition2,Drug) %>% summarise(mean.diff=mean(Difference))
+
+print(acrB_ompF_ABS_table, n=50) 
+
+###Stats
+ERY<-acrB_ompF_ABS[which(acrB_ompF_ABS$Drug=="ERY"),]
+NAL<-acrB_ompF_ABS[which(acrB_ompF_ABS$Drug=="NAL"),]
+PEN<-acrB_ompF_ABS[which(acrB_ompF_ABS$Drug=="PEN"),]
+STR<-acrB_ompF_ABS[which(acrB_ompF_ABS$Drug=="STR"),]
+TET<-acrB_ompF_ABS[which(acrB_ompF_ABS$Drug=="TET"),]
+TMS<-acrB_ompF_ABS[which(acrB_ompF_ABS$Drug=="TMS"),]
+
+compare_means(data=ERY,Difference~Condition2, ref.group = "10-day", method="t.test")
+compare_means(data=NAL,Difference~Condition2, ref.group = "10-day", method="t.test")
+compare_means(data=PEN,Difference~Condition2, ref.group = "10-day",method="t.test")
+compare_means(data=STR,Difference~Condition2, ref.group = "10-day",method="t.test")
+compare_means(data=TET,Difference~Condition2, ref.group = "10-day",method="t.test")
+compare_means(data=TMS,Difference~Condition2, ref.group = "10-day",method="t.test")
 
 
+compare_means(data=ERY,Difference~Condition2, ref.group = "Ancestor", method="t.test")
+compare_means(data=NAL,Difference~Condition2, ref.group = "Ancestor", method="t.test")
+compare_means(data=PEN,Difference~Condition2, ref.group = "Ancestor",method="t.test")
+compare_means(data=STR,Difference~Condition2, ref.group = "Ancestor",method="t.test")
+compare_means(data=TET,Difference~Condition2, ref.group = "Ancestor",method="t.test")
+compare_means(data=TMS,Difference~Condition2, ref.group = "Ancestor",method="t.test")
 
